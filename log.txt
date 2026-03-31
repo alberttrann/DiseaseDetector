@@ -1,0 +1,1022 @@
+(.venv) PS C:\Users\admin\Downloads\DATASET> python u.py
+2.5.1+cu121
+12.1
+True
+NVIDIA GeForce RTX 3090
+(.venv) PS C:\Users\admin\Downloads\DATASET> python data_preprocessing.py
+================================================================================
+CREATING TRAIN/VAL/TEST SPLIT
+================================================================================
+
+Total images: 37978
+Total classes: 21
+
+Train samples: 26584
+Val samples: 5697
+Test samples: 5697
+
+Copying train files...
+  Copied 28000/26584 files...
+  Copied 22000/26584 files...
+  Copied 27000/26584 files...
+  Copied 31000/26584 files...
+  Copied 33000/26584 files...
+  Copied 15000/26584 files...
+  Copied 8000/26584 files...
+  Copied 19000/26584 files...
+  Copied 10000/26584 files...
+  Copied 13000/26584 files...
+  Copied 18000/26584 files...
+  Copied 11000/26584 files...
+  Copied 37000/26584 files...
+  Copied 36000/26584 files...
+  Copied 17000/26584 files...
+  Copied 24000/26584 files...
+  Copied 2000/26584 files...
+  Copied 18000/26584 files...
+  Copied 11000/26584 files...
+  Copied 37000/26584 files...
+  Copied 36000/26584 files...
+  Copied 17000/26584 files...
+  Copied 24000/26584 files...
+  Copied 2000/26584 files...
+  Copied 17000/26584 files...
+  Copied 24000/26584 files...
+  Copied 2000/26584 files...
+  Copied 12000/26584 files...
+  Copied 12000/26584 files...
+  Copied 16000/26584 files...
+  Copied 16000/26584 files...
+  Copied 14000/26584 files...
+  Copied 34000/26584 files...
+  Copied 34000/26584 files...
+  Copied 1000/26584 files...
+  Copied 1000/26584 files...
+  Copied 5000/26584 files...
+  Copied 5000/26584 files...
+  Copied 23000/26584 files...
+  Copied 23000/26584 files...
+  Copied 9000/26584 files...
+  Copied 30000/26584 files...
+
+Copying val files...
+  Copied 21000/5697 files...
+  Copied 35000/5697 files...
+  Copied 32000/5697 files...
+  Copied 26000/5697 files...
+  Copied 6000/5697 files...
+  Copied 29000/5697 files...
+  Copied 20000/5697 files...
+  Copied 7000/5697 files...
+  Copied 21000/5697 files...
+  Copied 35000/5697 files...
+  Copied 32000/5697 files...
+  Copied 26000/5697 files...
+  Copied 6000/5697 files...
+  Copied 29000/5697 files...
+  Copied 20000/5697 files...
+  Copied 7000/5697 files...
+  Copied 21000/5697 files...
+  Copied 35000/5697 files...
+  Copied 32000/5697 files...
+  Copied 26000/5697 files...
+  Copied 6000/5697 files...
+  Copied 29000/5697 files...
+  Copied 20000/5697 files...
+  Copied 21000/5697 files...
+  Copied 35000/5697 files...
+  Copied 32000/5697 files...
+  Copied 26000/5697 files...
+  Copied 6000/5697 files...
+  Copied 21000/5697 files...
+  Copied 35000/5697 files...
+  Copied 32000/5697 files...
+  Copied 26000/5697 files...
+  Copied 21000/5697 files...
+  Copied 35000/5697 files...
+  Copied 32000/5697 files...
+  Copied 21000/5697 files...
+  Copied 35000/5697 files...
+  Copied 21000/5697 files...
+  Copied 21000/5697 files...
+  Copied 35000/5697 files...
+  Copied 32000/5697 files...
+  Copied 26000/5697 files...
+  Copied 6000/5697 files...
+  Copied 29000/5697 files...
+  Copied 20000/5697 files...
+  Copied 7000/5697 files...
+
+Copying test files...
+  Copied 25000/5697 files...
+  Copied 3000/5697 files...
+  Copied 4000/5697 files...
+
+ Dataset split complete!
+(.venv) PS C:\Users\admin\Downloads\DATASET> python data_loaders.py
+(.venv) PS C:\Users\admin\Downloads\DATASET> python data_loaders.py
+Number of classes: 21
+Train batches: 1662
+Val batches: 357
+Test batches: 357
+
+Batch shape: torch.Size([16, 3, 224, 224])
+Labels shape: torch.Size([16])
+(.venv) PS C:\Users\admin\Downloads\DATASET> python models.py
+(.venv) PS C:\Users\admin\Downloads\DATASET> python models.py
+model.safetensors: 100%|██████████████████████████| 21.4M/21.4M [00:05<00:00, 4.00MB/s]
+RiceClassifier(
+  (backbone): EfficientNet(
+    (conv_stem): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+    (bn1): BatchNormAct2d(
+      32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+      (drop): Identity()
+      (act): SiLU(inplace=True)
+    )
+    (blocks): Sequential(
+      (0): Sequential(
+        (0): DepthwiseSeparableConv(
+          (conv_dw): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=32, bias=False)
+          (bn1): BatchNormAct2d(
+            32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(32, 8, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(8, 32, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pw): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1), bias=False)      
+          (bn2): BatchNormAct2d(
+            16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+      )
+      (1): Sequential(
+        (0): InvertedResidual(
+          (conv_pw): Conv2d(16, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)      
+          (bn1): BatchNormAct2d(
+            96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(96, 96, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=96, bias=False)
+          (bn2): BatchNormAct2d(
+            96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(96, 4, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(4, 96, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(96, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)     
+          (bn3): BatchNormAct2d(
+            24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+        (1): InvertedResidual(
+          (conv_pw): Conv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)     
+          (bn1): BatchNormAct2d(
+            144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(144, 144, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=144, bias=False)
+          (bn2): BatchNormAct2d(
+            144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(144, 6, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(6, 144, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(144, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)    
+          (bn3): BatchNormAct2d(
+            24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+      )
+      (2): Sequential(
+        (0): InvertedResidual(
+          (conv_pw): Conv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)     
+          (bn1): BatchNormAct2d(
+            144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(144, 144, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=144, bias=False)
+          (bn2): BatchNormAct2d(
+            144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(144, 6, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(6, 144, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(144, 40, kernel_size=(1, 1), stride=(1, 1), bias=False)    
+          (bn3): BatchNormAct2d(
+            40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+        (1): InvertedResidual(
+          (conv_pw): Conv2d(40, 240, kernel_size=(1, 1), stride=(1, 1), bias=False)     
+          (bn1): BatchNormAct2d(
+            240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(240, 240, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=240, bias=False)
+          (bn2): BatchNormAct2d(
+            240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(240, 10, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(10, 240, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(240, 40, kernel_size=(1, 1), stride=(1, 1), bias=False)    
+          (bn3): BatchNormAct2d(
+            40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+      )
+      (3): Sequential(
+        (0): InvertedResidual(
+          (conv_pw): Conv2d(40, 240, kernel_size=(1, 1), stride=(1, 1), bias=False)     
+          (bn1): BatchNormAct2d(
+            240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(240, 240, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=240, bias=False)
+          (bn2): BatchNormAct2d(
+            240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(240, 10, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(10, 240, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(240, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)    
+          (bn3): BatchNormAct2d(
+            80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+        (1): InvertedResidual(
+          (conv_pw): Conv2d(80, 480, kernel_size=(1, 1), stride=(1, 1), bias=False)     
+          (bn1): BatchNormAct2d(
+            480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(480, 480, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=480, bias=False)
+          (bn2): BatchNormAct2d(
+            480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(480, 20, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(20, 480, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(480, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)    
+          (bn3): BatchNormAct2d(
+            80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+        (2): InvertedResidual(
+          (conv_pw): Conv2d(80, 480, kernel_size=(1, 1), stride=(1, 1), bias=False)     
+          (bn1): BatchNormAct2d(
+            480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(480, 480, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=480, bias=False)
+          (bn2): BatchNormAct2d(
+            480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(480, 20, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(20, 480, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(480, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)    
+          (bn3): BatchNormAct2d(
+            80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+      )
+      (4): Sequential(
+        (0): InvertedResidual(
+          (conv_pw): Conv2d(80, 480, kernel_size=(1, 1), stride=(1, 1), bias=False)     
+          (bn1): BatchNormAct2d(
+            480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(480, 480, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=480, bias=False)
+          (bn2): BatchNormAct2d(
+            480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(480, 20, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(20, 480, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(480, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)   
+          (bn3): BatchNormAct2d(
+            112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+        (1): InvertedResidual(
+          (conv_pw): Conv2d(112, 672, kernel_size=(1, 1), stride=(1, 1), bias=False)    
+          (bn1): BatchNormAct2d(
+            672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(672, 672, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=672, bias=False)
+          (bn2): BatchNormAct2d(
+            672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(672, 28, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(28, 672, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(672, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)   
+          (bn3): BatchNormAct2d(
+            112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+        (2): InvertedResidual(
+          (conv_pw): Conv2d(112, 672, kernel_size=(1, 1), stride=(1, 1), bias=False)    
+          (bn1): BatchNormAct2d(
+            672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(672, 672, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=672, bias=False)
+          (bn2): BatchNormAct2d(
+            672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(672, 28, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(28, 672, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(672, 112, kernel_size=(1, 1), stride=(1, 1), bias=False)   
+          (bn3): BatchNormAct2d(
+            112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+      )
+      (5): Sequential(
+        (0): InvertedResidual(
+          (conv_pw): Conv2d(112, 672, kernel_size=(1, 1), stride=(1, 1), bias=False)    
+          (bn1): BatchNormAct2d(
+            672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(672, 672, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=672, bias=False)
+          (bn2): BatchNormAct2d(
+            672, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(672, 28, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(28, 672, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(672, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)   
+          (bn3): BatchNormAct2d(
+            192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+        (1): InvertedResidual(
+          (conv_pw): Conv2d(192, 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)   
+          (bn1): BatchNormAct2d(
+            1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True        
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(1152, 1152, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1152, bias=False)
+          (bn2): BatchNormAct2d(
+            1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True        
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(1152, 48, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(48, 1152, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(1152, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)  
+          (bn3): BatchNormAct2d(
+            192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+        (2): InvertedResidual(
+          (conv_pw): Conv2d(192, 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)   
+          (bn1): BatchNormAct2d(
+            1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True        
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(1152, 1152, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1152, bias=False)
+          (bn2): BatchNormAct2d(
+            1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True        
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(1152, 48, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(48, 1152, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(1152, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)  
+          (bn3): BatchNormAct2d(
+            192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+        (3): InvertedResidual(
+          (conv_pw): Conv2d(192, 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)   
+          (bn1): BatchNormAct2d(
+            1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True        
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(1152, 1152, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1152, bias=False)
+          (bn2): BatchNormAct2d(
+            1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True        
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(1152, 48, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(48, 1152, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(1152, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)  
+          (bn3): BatchNormAct2d(
+            192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+      )
+      (6): Sequential(
+        (0): InvertedResidual(
+          (conv_pw): Conv2d(192, 1152, kernel_size=(1, 1), stride=(1, 1), bias=False)   
+          (bn1): BatchNormAct2d(
+            1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True        
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (conv_dw): Conv2d(1152, 1152, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1152, bias=False)
+          (bn2): BatchNormAct2d(
+            1152, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True        
+            (drop): Identity()
+            (act): SiLU(inplace=True)
+          )
+          (aa): Identity()
+          (se): SqueezeExcite(
+            (conv_reduce): Conv2d(1152, 48, kernel_size=(1, 1), stride=(1, 1))
+            (act1): SiLU(inplace=True)
+            (conv_expand): Conv2d(48, 1152, kernel_size=(1, 1), stride=(1, 1))
+            (gate): Sigmoid()
+          )
+          (conv_pwl): Conv2d(1152, 320, kernel_size=(1, 1), stride=(1, 1), bias=False)  
+          (bn3): BatchNormAct2d(
+            320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+            (drop): Identity()
+            (act): Identity()
+          )
+          (drop_path): Identity()
+        )
+      )
+    )
+    (conv_head): Conv2d(320, 1280, kernel_size=(1, 1), stride=(1, 1), bias=False)       
+    (bn2): BatchNormAct2d(
+      1280, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+      (drop): Identity()
+      (act): SiLU(inplace=True)
+    )
+    (global_pool): SelectAdaptivePool2d(pool_type=avg, flatten=Flatten(start_dim=1, end_dim=-1))
+    (classifier): Identity()
+  )
+  (classifier): Sequential(
+    (0): Dropout(p=0.3, inplace=False)
+    (1): Linear(in_features=1280, out_features=512, bias=True)
+    (2): ReLU()
+    (3): Dropout(p=0.2, inplace=False)
+    (4): Linear(in_features=512, out_features=20, bias=True)
+  )
+)
+
+Output shape: torch.Size([2, 20])
+
+
+
+
+
+
+
+(.venv) PS C:\Users\admin\Downloads\DATASET> python npk_preprocessing.py
+>>
+================================================================================
+LOADING DATA
+================================================================================
+
+Dataset shape: (2200, 8)
+Features: ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall', 'label']
+
+Class distribution:
+label
+rice           100
+maize          100
+chickpea       100
+kidneybeans    100
+pigeonpeas     100
+mothbeans      100
+mungbean       100
+blackgram      100
+lentil         100
+pomegranate    100
+banana         100
+mango          100
+grapes         100
+watermelon     100
+muskmelon      100
+apple          100
+orange         100
+papaya         100
+coconut        100
+cotton         100
+jute           100
+coffee         100
+Name: count, dtype: int64
+
+================================================================================
+FEATURE ENGINEERING
+================================================================================
+
+ Original features: 7
+ Engineered features: 22
+ Total features: 29
+
+================================================================================
+PREPARING TRAIN/VAL/TEST SPLITS
+================================================================================
+
+Train samples: 1540 (70.0%)
+Val samples: 220 (10.0%)
+Test samples: 440 (20.0%)
+
+ Features scaled using RobustScaler
+
+ Preprocessor saved to: models\preprocessor
+
+================================================================================
+PREPROCESSING COMPLETE!
+================================================================================
+
+Train shape: (1540, 29)
+Val shape: (220, 29)
+Test shape: (440, 29)
+
+(.venv) PS C:\Users\admin\Downloads\DATASET> python npk_train_advanced.py
+>>
+ Starting Smart Hyperparameter Tuning Pipeline
+================================================================================
+================================================================================
+LOADING DATA
+================================================================================
+
+Dataset shape: (2200, 8)
+Features: ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall', 'label']
+
+Class distribution:
+label
+rice           100
+maize          100
+chickpea       100
+kidneybeans    100
+pigeonpeas     100
+mothbeans      100
+mungbean       100
+blackgram      100
+lentil         100
+pomegranate    100
+banana         100
+mango          100
+grapes         100
+watermelon     100
+muskmelon      100
+apple          100
+orange         100
+papaya         100
+coconut        100
+cotton         100
+jute           100
+coffee         100
+Name: count, dtype: int64
+
+================================================================================
+FEATURE ENGINEERING
+================================================================================
+
+ Original features: 7
+ Engineered features: 22
+ Total features: 29
+
+================================================================================
+PREPARING TRAIN/VAL/TEST SPLITS
+================================================================================
+
+Train samples: 1540 (70.0%)
+Val samples: 220 (10.0%)
+Test samples: 440 (20.0%)
+
+ Features scaled using RobustScaler
+
+ Preprocessor saved to: models\preprocessor
+
+STARTING HYPERPARAMETER TUNING
+
+================================================================================
+TUNING RANDOM FOREST
+================================================================================
+
+Testing 324 parameter combinations...
+This will test most impactful combinations only.
+
+ 89%|██████████████████████████████████████▏    | 24/27 [00:04<00:00,  4.94it/s, best_val=99.09%] 
+
+================================================================================
+RANDOM FOREST BEST PARAMETERS:
+================================================================================
+  n_estimators: 100
+  max_depth: 15
+  min_samples_split: 2
+  min_samples_leaf: 2
+  max_features: sqrt
+
+Best Validation Score: 99.09%
+
+================================================================================
+TUNING XGBOOST
+================================================================================
+
+Testing smart XGBoost combinations...
+
+100%|███████████████████████████████████████████| 27/27 [00:17<00:00,  1.58it/s, best_val=99.09%] 
+
+================================================================================
+XGBOOST BEST PARAMETERS:
+================================================================================
+  n_estimators: 100
+  max_depth: 6
+  learning_rate: 0.01
+  subsample: 0.8
+  colsample_bytree: 0.8
+
+Best Validation Score: 99.09%
+
+================================================================================
+TUNING LIGHTGBM
+================================================================================
+
+Testing smart LightGBM combinations...
+
+100%|███████████████████████████████████████████| 27/27 [00:12<00:00,  2.12it/s, best_val=99.09%] 
+
+================================================================================
+LIGHTGBM BEST PARAMETERS:
+================================================================================
+  n_estimators: 100
+  max_depth: 6
+  num_leaves: 15
+  learning_rate: 0.1
+  subsample: 0.8
+  colsample_bytree: 0.8
+
+Best Validation Score: 99.09%
+
+================================================================================
+TUNING CATBOOST
+================================================================================
+
+Testing smart CatBoost combinations...
+
+100%|███████████████████████████████████████████| 27/27 [14:21<00:00, 31.90s/it, best_val=99.55%] 
+
+================================================================================
+CATBOOST BEST PARAMETERS:
+================================================================================
+  iterations: 200
+  depth: 8
+  learning_rate: 0.01
+
+Best Validation Score: 99.55%
+
+================================================================================
+TUNING COMPLETE!
+================================================================================
+Total time: 14.93 minutes
+
+================================================================================
+TUNING SUMMARY
+================================================================================
+
+         Model Best Val Score
+     catboost         99.55%
+random_forest         99.09%
+      xgboost         99.09%
+     lightgbm         99.09%
+
+================================================================================
+ BEST MODEL: CATBOOST
+ BEST SCORE: 99.55%
+================================================================================
+
+ Saved tuning comparison plot: models/tuning_comparison.png
+ Saved parameter importance plot: models/parameter_importance.png
+
+ Saved best hyperparameters to: models/best_hyperparameters.py
+
+TUNING PIPELINE COMPLETE!
+
+Next steps:
+1. Check 'models/tuning_summary.csv' for best scores
+2. Review 'models/best_hyperparameters.py' for optimal parameters
+3. Use these parameters to train final model on full dataset
+(.venv) PS C:\Users\admin\Downloads\DATASET> python npk_evaluate.py
+================================================================================
+LOADING DATA
+================================================================================
+
+Dataset shape: (2200, 8)
+Features: ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall', 'label']
+
+Class distribution:
+label
+rice           100
+maize          100
+chickpea       100
+kidneybeans    100
+pigeonpeas     100
+mothbeans      100
+mungbean       100
+blackgram      100
+lentil         100
+pomegranate    100
+banana         100
+mango          100
+grapes         100
+watermelon     100
+muskmelon      100
+apple          100
+orange         100
+papaya         100
+coconut        100
+cotton         100
+jute           100
+coffee         100
+Name: count, dtype: int64
+
+================================================================================
+FEATURE ENGINEERING
+================================================================================
+
+ Original features: 7
+ Engineered features: 22
+ Total features: 29
+
+================================================================================
+PREPARING TRAIN/VAL/TEST SPLITS
+================================================================================
+
+Train samples: 1540 (70.0%)
+Val samples: 220 (10.0%)
+Test samples: 440 (20.0%)
+
+ Features scaled using RobustScaler
+
+ Preprocessor saved to: models\preprocessor
+Loading model from: models\best_model_catboost.pkl
+ Model loaded.
+Loading model from: models\best_model_lightgbm.pkl
+ Model loaded.
+Loading model from: models\best_model_random_forest.pkl
+ Model loaded.
+Loading model from: models\best_model_xgboost.pkl
+ Model loaded.
+Selected best model file: best_model_lightgbm.pkl (Test Acc: 99.55%)
+
+Test Accuracy: 99.55%
+
+Classification Report:
+               precision    recall  f1-score   support
+
+       apple     1.0000    1.0000    1.0000        20
+      banana     1.0000    1.0000    1.0000        20
+   blackgram     1.0000    1.0000    1.0000        20
+    chickpea     1.0000    1.0000    1.0000        20
+     coconut     1.0000    1.0000    1.0000        20
+      coffee     1.0000    1.0000    1.0000        20
+      cotton     1.0000    1.0000    1.0000        20
+      grapes     1.0000    1.0000    1.0000        20
+        jute     1.0000    1.0000    1.0000        20
+ kidneybeans     1.0000    1.0000    1.0000        20
+      lentil     1.0000    0.9500    0.9744        20
+       maize     1.0000    1.0000    1.0000        20
+       mango     1.0000    1.0000    1.0000        20
+   mothbeans     0.9091    1.0000    0.9524        20
+    mungbean     1.0000    1.0000    1.0000        20
+   muskmelon     1.0000    1.0000    1.0000        20
+      orange     1.0000    1.0000    1.0000        20
+      papaya     1.0000    1.0000    1.0000        20
+  pigeonpeas     1.0000    0.9500    0.9744        20
+ pomegranate     1.0000    1.0000    1.0000        20
+        rice     1.0000    1.0000    1.0000        20
+  watermelon     1.0000    1.0000    1.0000        20
+
+    accuracy                         0.9955       440
+   macro avg     0.9959    0.9955    0.9955       440
+weighted avg     0.9959    0.9955    0.9955       440
+
+ Saved confusion matrix.
+ Saved per-class metrics.
+ Saved feature importance.
+
+================================================================================
+Final Test Accuracy: 99.55%
+================================================================================
+=========
+
+(.venv) PS C:\Users\admin\Downloads\DATASET> python predict_crop.py
+Loading model and preprocessor...
+ Model loaded
+ Scaler loaded
+ Label encoder loaded with 22 crops
+ Feature names loaded: 29 features expected
+
+================================================================================
+EXAMPLE 1: Rice-suitable conditions
+================================================================================
+Input: N=90, P=42, K=43, T=21°C, H=82%, pH=6.5, R=203mm
+ Engineered 29 features
+  Features: ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall', 'N_P_ratio', 'N_K_ratio', 'P_K_ratio', 'total_NPK', 'temp_humidity_product', 'temp_humidity_diff', 'moisture_index', 'ph_neutral_dev', 'N_squared', 'P_squared', 'K_squared', 'N_temp', 'P_rainfall', 'K_humidity', 'temp_zone_moderate', 'temp_zone_warm', 'temp_zone_hot', 'humidity_zone_moderate', 'humidity_zone_humid', 'rainfall_zone_medium', 'rainfall_zone_high', 'rainfall_zone_very_high']
+ Features scaled using RobustScaler
+ Prediction complete
+
+ Recommended Crop: RICE
+ Confidence: 100.00%
+
+Top 3 recommendations:
+  1. rice: 100.00%
+  2. jute: 0.00%
+  3. coffee: 0.00%
+
+================================================================================
+EXAMPLE 2: Apple-suitable conditions
+================================================================================
+Input: N=20, P=130, K=200, T=22°C, H=92%, pH=6.0, R=110mm
+✓ Engineered 29 features
+  Features: ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall', 'N_P_ratio', 'N_K_ratio', 'P_K_ratio', 'total_NPK', 'temp_humidity_product', 'temp_humidity_diff', 'moisture_index', 'ph_neutral_dev', 'N_squared', 'P_squared', 'K_squared', 'N_temp', 'P_rainfall', 'K_humidity', 'temp_zone_moderate', 'temp_zone_warm', 'temp_zone_hot', 'humidity_zone_moderate', 'humidity_zone_humid', 'rainfall_zone_medium', 'rainfall_zone_high', 'rainfall_zone_very_high']
+✓ Features scaled using RobustScaler
+✓ Prediction complete
+
+ Recommended Crop: APPLE
+ Confidence: 100.00%
+
+Top 3 recommendations:
+  1. apple: 100.00%
+  2. grapes: 0.00%
+  3. banana: 0.00%
+
+================================================================================
+EXAMPLE 3: Your custom input
+================================================================================
+Input: N=85, P=60, K=45, T=28°C, H=75%, pH=6.8, R=150mm
+✓ Engineered 29 features
+  Features: ['N', 'P', 'K', 'temperature', 'humidity', 'ph', 'rainfall', 'N_P_ratio', 'N_K_ratio', 'P_K_ratio', 'total_NPK', 'temp_humidity_product', 'temp_humidity_diff', 'moisture_index', 'ph_neutral_dev', 'N_squared', 'P_squared', 'K_squared', 'N_temp', 'P_rainfall', 'K_humidity', 'temp_zone_moderate', 'temp_zone_warm', 'temp_zone_hot', 'humidity_zone_moderate', 'humidity_zone_humid', 'rainfall_zone_medium', 'rainfall_zone_high', 'rainfall_zone_very_high']
+✓ Features scaled using RobustScaler
+✓ Prediction complete
+
+ Recommended Crop: JUTE
+ Confidence: 99.55%
+
+Top 3 recommendations:
+  1. jute: 99.55%
+  2. banana: 0.03%
+  3. papaya: 0.03%
+
+================================================================================
+VALIDATION: Testing with diverse inputs
+================================================================================
+
+Cold + Low Rainfall:
+  → muskmelon (91.3%)
+
+Hot + High Rainfall:
+  → banana (86.8%)
+
+Moderate:
+  → blackgram (18.6%)
