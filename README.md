@@ -76,9 +76,9 @@ DATASET/
 └── requirements.txt
 ```
 
-`processed_dataset` có thể được xem tại (đây)[https://drive.google.com/drive/u/2/folders/1OY9h1aIC5UnoeNyvmej_tRaSvwngSZCG]
+`processed_dataset` có thể được xem tại [đây](https://drive.google.com/drive/u/2/folders/1OY9h1aIC5UnoeNyvmej_tRaSvwngSZCG)
 
-`checkpoints`và 4 folder data gốc, chưa chia train/test/val, có thể được xem tại (đây)[https://drive.google.com/drive/u/5/folders/14xefJ_dVonEZHFo_yvmBAtjGlPbqUVwX]
+`checkpoints`và 4 folder data gốc, chưa chia train/test/val, có thể được xem tại [đây](https://drive.google.com/drive/u/5/folders/14xefJ_dVonEZHFo_yvmBAtjGlPbqUVwX)
 
 ---
 
