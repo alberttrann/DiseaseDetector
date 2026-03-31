@@ -1,0 +1,5 @@
+Model,Best Val Score
+catboost,99.55%
+random_forest,99.09%
+xgboost,99.09%
+lightgbm,99.09%

@@ -1,0 +1,30 @@
+CLASSIFICATION REPORT
+================================================================================
+
+                                                      precision    recall  f1-score   support
+
+                 Bệnh Bạc lá (Bacterial leaf blight)     1.0000    0.9977    0.9989       443
+                         Bệnh Cháy lá ( Leaf scald )     1.0000    1.0000    1.0000       501
+                 Bệnh Gạch Nâu ( Narrow Brown Spot )     1.0000    1.0000    1.0000       425
+                       Bệnh Than Vàng ( False Smut )     1.0000    1.0000    1.0000        15
+       Bệnh lúa von (lúa đực) (Rice bakanae disease)     1.0000    1.0000    1.0000        15
+Bệnh Đạo ôn lá và cổ bông (Rice leaf and neck blast)     1.0000    1.0000    1.0000       300
+                         Bệnh Đốm Nâu ( Brown spot )     1.0000    1.0000    1.0000       471
+          Bệnh Đốm Vằn ( Khô vằn ) ( Sheath Blight )     0.9979    1.0000    0.9989       474
+                                   Bọ trĩ ( Thrips )     1.0000    1.0000    1.0000       174
+                                             Healthy     1.0000    1.0000    1.0000       565
+                                                   K     0.9914    1.0000    0.9957       115
+                                                   N     0.9925    1.0000    0.9962       132
+                                                   P     1.0000    0.9800    0.9899       100
+                        Rầy Nâu (Brown Plant Hopper)     1.0000    1.0000    1.0000        87
+                     Sâu cuốn lá lớn ( Rice skipper)     1.0000    1.0000    1.0000       142
+                 Sâu cuốn lá nhỏ ( Rice leaf folder)     1.0000    1.0000    1.0000       181
+                                   Sâu gai ( Hispa )     1.0000    1.0000    1.0000       439
+              Sâu năn ( Muỗi hành )(Rice Gall Midge)     1.0000    1.0000    1.0000       237
+               Sâu đục thân (Rice yellow stem borer)     0.9855    1.0000    0.9927       136
+       Sâu đục thân (Sọc nâu )( Chilo suppressalis )     1.0000    0.9910    0.9955       223
+                                        Tungro virus     1.0000    1.0000    1.0000       522
+
+                                            accuracy                         0.9991      5697
+                                           macro avg     0.9984    0.9985    0.9985      5697
+                                        weighted avg     0.9991    0.9991    0.9991      5697

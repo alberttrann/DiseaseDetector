@@ -1,0 +1,12 @@
+MISCLASSIFICATION ANALYSIS
+================================================================================
+
+Total misclassified: 5 / 5697
+Error rate: 0.09%
+
+All Misclassification Patterns:
+--------------------------------------------------------------------------------
+Sâu đục thân (Sọc nâu )( Chilo suppressalis ) → Sâu đục thân (Rice yellow stem borer) :    2 times
+P → K                                                        :    1 times
+P → N                                                        :    1 times
+Bệnh Bạc lá (Bacterial leaf blight) → Bệnh Đốm Vằn ( Khô vằn ) ( Sheath Blight ) :    1 times

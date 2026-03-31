@@ -1,0 +1,5 @@
+Model,Train Acc,Val Acc,Test Acc
+random_forest,100.00%,99.09%,99.55%
+lightgbm,100.00%,99.09%,99.55%
+xgboost,99.94%,99.09%,99.32%
+catboost,98.90%,99.55%,97.27%

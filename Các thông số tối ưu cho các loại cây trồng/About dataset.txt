@@ -1,0 +1,32 @@
+N (Nitrogen content in soil)
+Represents the amount of Nitrogen present in the soil (in kg/ha).
+Nitrogen is essential for plant growth, especially for leaf development.
+--------------------------------------------------------------------------------------------------------------------
+P (Phosphorus content in soil)
+Amount of Phosphorus present in the soil (in kg/ha).
+Helps in root development and flower/fruit production.
+--------------------------------------------------------------------------------------------------------------------
+K (Potassium content in soil)
+Amount of Potassium present in the soil (in kg/ha).
+Important for disease resistance, water regulation, and crop quality.
+--------------------------------------------------------------------------------------------------------------------
+temperature
+The average temperature of the region (in °C).
+Crops require different temperature ranges to grow optimally.
+--------------------------------------------------------------------------------------------------------------------
+humidity
+Relative humidity of the air (in %).
+Higher humidity helps some crops (like rice), while others prefer dry conditions.
+--------------------------------------------------------------------------------------------------------------------
+ph
+Soil pH value (0–14 scale, usually 4–9 in agriculture).
+Indicates acidity or alkalinity of soil; most crops prefer slightly acidic to neutral soil (6–7.5).
+--------------------------------------------------------------------------------------------------------------------
+rainfall
+Average rainfall (in mm).
+Different crops need different water levels; e.g., rice requires heavy rainfall, whereas wheat needs moderate water.
+--------------------------------------------------------------------------------------------------------------------
+label
+The target variable (crop name).
+Example: rice, maize, chickpea, banana, etc.
+This is what we predict using machine learning based on soil and climate conditions.
