@@ -1,0 +1,151 @@
+====================================================================================================
+COMPLETE DIRECTORY STRUCTURE REPORT
+====================================================================================================
+
+Base Directory: C:\Users\admin\Downloads\DATASET
+Total Images Found: 22841
+
+----------------------------------------------------------------------------------------------------
+ALL DIRECTORIES WITH IMAGES:
+----------------------------------------------------------------------------------------------------
+  1882 images: Cây lúa khỏe mạnh
+  1740 images: I Côn trùng trên lúa\Tungro virus\Ảnh
+  1670 images: II Bệnh gây hại trên lúa\Bệnh Cháy lá ( Leaf scald )\Ảnh
+  1578 images: II Bệnh gây hại trên lúa\Bệnh Đốm Vằn ( Khô vằn ) ( Sheath Blight )\Ảnh
+  1570 images: II Bệnh gây hại trên lúa\Bệnh Đốm Nâu ( Brown spot )\Ảnh
+  1475 images: II Bệnh gây hại trên lúa\Bệnh Bạc lá (Bacterial leaf blight)\Ảnh
+  1461 images: I Côn trùng trên lúa\Sâu gai ( Hispa )\Ảnh
+  1416 images: II Bệnh gây hại trên lúa\Bệnh Gạch Nâu ( Narrow Brown Spot )\Ảnh
+  1194 images: preprocessedDataset\8
+  1110 images: preprocessedDataset\7
+  1000 images: II Bệnh gây hại trên lúa\Bệnh Đạo ôn lá và cổ bông (Rice leaf and neck blast)\Ảnh
+   791 images: I Côn trùng trên lúa\Sâu năn ( Muỗi hành )(Rice Gall Midge)\Ảnh
+   745 images: I Côn trùng trên lúa\Sâu đục thân (Sọc nâu )( Chilo suppressalis )\Ảnh
+   686 images: preprocessedDataset\9
+   605 images: I Côn trùng trên lúa\Sâu cuốn lá nhỏ ( Rice leaf folder)\Ảnh
+   580 images: I Côn trùng trên lúa\Bọ trĩ ( Thrips )\Ảnh
+   480 images: preprocessedDataset\10
+   475 images: I Côn trùng trên lúa\Sâu cuốn lá lớn ( Rice skipper)\Ảnh
+   455 images: I Côn trùng trên lúa\Sâu đục thân (Rice yellow stem borer)\Ảnh
+   440 images: III Thiếu dinh dưỡng\N\Nitrogen(N)
+   383 images: III Thiếu dinh dưỡng\K\Potassium(K)
+   333 images: III Thiếu dinh dưỡng\P\Phosphorus(P)
+   325 images: preprocessedDataset\paddy stem maggot
+   290 images: I Côn trùng trên lúa\Rầy Nâu (Brown Plant Hopper)\Ảnh
+   100 images: II Bệnh gây hại trên lúa\Bệnh lúa von (lúa đực) (Rice bakanae disease)\ảnh
+    50 images: II Bệnh gây hại trên lúa\Bệnh Than Vàng ( False Smut )\Ảnh
+     7 images: eda_outputs\npk_analysis
+
+----------------------------------------------------------------------------------------------------
+IMAGE EXTENSIONS FOUND:
+----------------------------------------------------------------------------------------------------
+.JPG: 1213 images
+.jpeg: 100 images
+.jpg: 21521 images
+.png: 7 images
+
+----------------------------------------------------------------------------------------------------
+SAMPLE IMAGE PATHS (first 100):
+----------------------------------------------------------------------------------------------------
+Cây lúa khỏe mạnh\20231006_163255.jpg
+Cây lúa khỏe mạnh\20231006_163740.jpg
+Cây lúa khỏe mạnh\20231006_163746.jpg
+Cây lúa khỏe mạnh\20231006_165517(0).jpg
+Cây lúa khỏe mạnh\20231006_165518.jpg
+Cây lúa khỏe mạnh\healthy (1).jpg
+Cây lúa khỏe mạnh\healthy (10).jpg
+Cây lúa khỏe mạnh\healthy (100).jpg
+Cây lúa khỏe mạnh\healthy (101).jpg
+Cây lúa khỏe mạnh\healthy (102).jpg
+Cây lúa khỏe mạnh\healthy (103).jpg
+Cây lúa khỏe mạnh\healthy (104).jpg
+Cây lúa khỏe mạnh\healthy (105).jpg
+Cây lúa khỏe mạnh\healthy (106).jpg
+Cây lúa khỏe mạnh\healthy (107).jpg
+Cây lúa khỏe mạnh\healthy (108).jpg
+Cây lúa khỏe mạnh\healthy (109).jpg
+Cây lúa khỏe mạnh\healthy (11).jpg
+Cây lúa khỏe mạnh\healthy (110).jpg
+Cây lúa khỏe mạnh\healthy (111).jpg
+Cây lúa khỏe mạnh\healthy (112).jpg
+Cây lúa khỏe mạnh\healthy (113).jpg
+Cây lúa khỏe mạnh\healthy (114).jpg
+Cây lúa khỏe mạnh\healthy (115).jpg
+Cây lúa khỏe mạnh\healthy (116).jpg
+Cây lúa khỏe mạnh\healthy (117).jpg
+Cây lúa khỏe mạnh\healthy (118).jpg
+Cây lúa khỏe mạnh\healthy (119).jpg
+Cây lúa khỏe mạnh\healthy (12).jpg
+Cây lúa khỏe mạnh\healthy (120).jpg
+Cây lúa khỏe mạnh\healthy (121).jpg
+Cây lúa khỏe mạnh\healthy (122).jpg
+Cây lúa khỏe mạnh\healthy (123).jpg
+Cây lúa khỏe mạnh\healthy (124).jpg
+Cây lúa khỏe mạnh\healthy (125).jpg
+Cây lúa khỏe mạnh\healthy (126).jpg
+Cây lúa khỏe mạnh\healthy (127).jpg
+Cây lúa khỏe mạnh\healthy (128).jpg
+Cây lúa khỏe mạnh\healthy (129).jpg
+Cây lúa khỏe mạnh\healthy (13).jpg
+Cây lúa khỏe mạnh\healthy (130).jpg
+Cây lúa khỏe mạnh\healthy (131).jpg
+Cây lúa khỏe mạnh\healthy (132).jpg
+Cây lúa khỏe mạnh\healthy (133).jpg
+Cây lúa khỏe mạnh\healthy (134).jpg
+Cây lúa khỏe mạnh\healthy (135).jpg
+Cây lúa khỏe mạnh\healthy (136).jpg
+Cây lúa khỏe mạnh\healthy (137).jpg
+Cây lúa khỏe mạnh\healthy (138).jpg
+Cây lúa khỏe mạnh\healthy (139).jpg
+Cây lúa khỏe mạnh\healthy (14).jpg
+Cây lúa khỏe mạnh\healthy (140).jpg
+Cây lúa khỏe mạnh\healthy (141).jpg
+Cây lúa khỏe mạnh\healthy (142).jpg
+Cây lúa khỏe mạnh\healthy (143).jpg
+Cây lúa khỏe mạnh\healthy (144).jpg
+Cây lúa khỏe mạnh\healthy (145).jpg
+Cây lúa khỏe mạnh\healthy (146).jpg
+Cây lúa khỏe mạnh\healthy (147).jpg
+Cây lúa khỏe mạnh\healthy (148).jpg
+Cây lúa khỏe mạnh\healthy (149).jpg
+Cây lúa khỏe mạnh\healthy (15).jpg
+Cây lúa khỏe mạnh\healthy (150).jpg
+Cây lúa khỏe mạnh\healthy (151).jpg
+Cây lúa khỏe mạnh\healthy (152).jpg
+Cây lúa khỏe mạnh\healthy (153).jpg
+Cây lúa khỏe mạnh\healthy (154).jpg
+Cây lúa khỏe mạnh\healthy (155).jpg
+Cây lúa khỏe mạnh\healthy (156).jpg
+Cây lúa khỏe mạnh\healthy (157).jpg
+Cây lúa khỏe mạnh\healthy (158).jpg
+Cây lúa khỏe mạnh\healthy (159).jpg
+Cây lúa khỏe mạnh\healthy (16).jpg
+Cây lúa khỏe mạnh\healthy (160).jpg
+Cây lúa khỏe mạnh\healthy (161).jpg
+Cây lúa khỏe mạnh\healthy (162).jpg
+Cây lúa khỏe mạnh\healthy (163).jpg
+Cây lúa khỏe mạnh\healthy (164).jpg
+Cây lúa khỏe mạnh\healthy (165).jpg
+Cây lúa khỏe mạnh\healthy (166).jpg
+Cây lúa khỏe mạnh\healthy (167).jpg
+Cây lúa khỏe mạnh\healthy (168).jpg
+Cây lúa khỏe mạnh\healthy (169).jpg
+Cây lúa khỏe mạnh\healthy (17).jpg
+Cây lúa khỏe mạnh\healthy (170).jpg
+Cây lúa khỏe mạnh\healthy (171).jpg
+Cây lúa khỏe mạnh\healthy (172).jpg
+Cây lúa khỏe mạnh\healthy (173).jpg
+Cây lúa khỏe mạnh\healthy (174).jpg
+Cây lúa khỏe mạnh\healthy (175).jpg
+Cây lúa khỏe mạnh\healthy (176).jpg
+Cây lúa khỏe mạnh\healthy (177).jpg
+Cây lúa khỏe mạnh\healthy (178).jpg
+Cây lúa khỏe mạnh\healthy (179).jpg
+Cây lúa khỏe mạnh\healthy (18).jpg
+Cây lúa khỏe mạnh\healthy (180).jpg
+Cây lúa khỏe mạnh\healthy (181).jpg
+Cây lúa khỏe mạnh\healthy (182).jpg
+Cây lúa khỏe mạnh\healthy (183).jpg
+Cây lúa khỏe mạnh\healthy (184).jpg
+
+... and 22741 more images
