@@ -1,0 +1,70 @@
+================================================================================
+RICE DISEASE IMAGE DATASET - EDA SUMMARY REPORT
+================================================================================
+
+1. DATASET OVERVIEW
+--------------------------------------------------------------------------------
+Total Images: 37,978
+Total Classes: 21
+
+Images by Category:
+  Disease: 17,618 images
+  Pest: 14,284 images
+  Healthy: 3,764 images
+  Nutrition: 2,312 images
+
+2. CLASS DISTRIBUTION
+--------------------------------------------------------------------------------
+ 3,764 images: Healthy (Healthy)
+ 3,480 images: Tungro virus (Pest)
+ 3,340 images: Bệnh Cháy lá ( Leaf scald ) (Disease)
+ 3,156 images: Bệnh Đốm Vằn ( Khô vằn ) ( Sheath Blight ) (Disease)
+ 3,140 images: Bệnh Đốm Nâu ( Brown spot ) (Disease)
+ 2,950 images: Bệnh Bạc lá (Bacterial leaf blight) (Disease)
+ 2,922 images: Sâu gai ( Hispa ) (Pest)
+ 2,832 images: Bệnh Gạch Nâu ( Narrow Brown Spot ) (Disease)
+ 2,000 images: Bệnh Đạo ôn lá và cổ bông (Rice leaf and neck blast) (Disease)
+ 1,582 images: Sâu năn ( Muỗi hành )(Rice Gall Midge) (Pest)
+ 1,490 images: Sâu đục thân (Sọc nâu )( Chilo suppressalis ) (Pest)
+ 1,210 images: Sâu cuốn lá nhỏ ( Rice leaf folder) (Pest)
+ 1,160 images: Bọ trĩ ( Thrips ) (Pest)
+   950 images: Sâu cuốn lá lớn ( Rice skipper) (Pest)
+   910 images: Sâu đục thân (Rice yellow stem borer) (Pest)
+   880 images: N (Nutrition)
+   766 images: K (Nutrition)
+   666 images: P (Nutrition)
+   580 images: Rầy Nâu (Brown Plant Hopper) (Pest)
+   100 images: Bệnh lúa von (lúa đực) (Rice bakanae disease) (Disease)
+   100 images: Bệnh Than Vàng ( False Smut ) (Disease)
+
+3. DATA BALANCE ASSESSMENT
+--------------------------------------------------------------------------------
+Min images per class: 100
+Max images per class: 3,764
+Mean images per class: 1808.5
+Median images per class: 1490.0
+Imbalance ratio (max/min): 37.64x
+
+4. KEY FINDINGS
+--------------------------------------------------------------------------------
+- Dataset contains 21 different classes
+- Classes are organized into 4 main categories:
+  * Healthy rice plants
+  * Rice diseases
+  * Rice pests
+  * Nutrient deficiencies
+- Images vary in dimensions and quality
+- Class imbalance present - need addressing during training
+
+6. RECOMMENDATIONS FOR MODELING
+--------------------------------------------------------------------------------
+- Resize all images to consistent dimensions (e.g., 224x224 or 299x299)
+- Apply data augmentation for minority classes:
+  * Random rotation, flip, brightness adjustment
+  * Random crop, zoom, translation
+- Use transfer learning (ResNet, EfficientNet, Vision Transformer)
+- Implement stratified train-validation-test split
+- Consider class weights or focal loss for imbalanced classes
+- Use appropriate metrics: F1-score, precision, recall per class
+- Consider hierarchical classification (category → specific disease)
+- Use PIL-based data loaders to handle Unicode file paths
