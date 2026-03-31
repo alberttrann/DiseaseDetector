@@ -1,0 +1,69 @@
+================================================================================
+CROP RECOMMENDATION DATASET - EDA SUMMARY REPORT
+================================================================================
+
+1. DATASET OVERVIEW
+--------------------------------------------------------------------------------
+Total Samples: 2200
+Number of Features: 8
+Number of Crops: 22
+Crop Types: rice, maize, chickpea, kidneybeans, pigeonpeas, mothbeans, mungbean, blackgram, lentil, pomegranate, banana, mango, grapes, watermelon, muskmelon, apple, orange, papaya, coconut, cotton, jute, coffee
+
+2. DATA QUALITY
+--------------------------------------------------------------------------------
+Missing Values: 0
+Duplicate Rows: 0
+
+3. FEATURE STATISTICS
+--------------------------------------------------------------------------------
+                 N            P            K  temperature     humidity           ph     rainfall
+count  2200.000000  2200.000000  2200.000000  2200.000000  2200.000000  2200.000000  2200.000000
+mean     50.551818    53.362727    48.149091    25.616244    71.481779     6.469480   103.463655
+std      36.917334    32.985883    50.647931     5.063749    22.263812     0.773938    54.958389
+min       0.000000     5.000000     5.000000     8.825675    14.258040     3.504752    20.211267
+25%      21.000000    28.000000    20.000000    22.769375    60.261953     5.971693    64.551686
+50%      37.000000    51.000000    32.000000    25.598693    80.473146     6.425045    94.867624
+75%      84.250000    68.000000    49.000000    28.561654    89.948771     6.923643   124.267508
+max     140.000000   145.000000   205.000000    43.675493    99.981876     9.935091   298.560117
+
+4. CROP DISTRIBUTION
+--------------------------------------------------------------------------------
+label
+rice           100
+maize          100
+chickpea       100
+kidneybeans    100
+pigeonpeas     100
+mothbeans      100
+mungbean       100
+blackgram      100
+lentil         100
+pomegranate    100
+banana         100
+mango          100
+grapes         100
+watermelon     100
+muskmelon      100
+apple          100
+orange         100
+papaya         100
+coconut        100
+cotton         100
+jute           100
+coffee         100
+
+5. KEY FINDINGS
+--------------------------------------------------------------------------------
+- Dataset is well-balanced across different crop types
+- No missing values detected
+- Features show varying scales (normalization recommended)
+- Temperature and humidity show strong correlation
+- Each crop has distinct NPK requirements
+
+6. RECOMMENDATIONS FOR MODELING
+--------------------------------------------------------------------------------
+- Apply feature scaling (StandardScaler or MinMaxScaler)
+- Consider feature engineering (NPK ratios, etc.)
+- Use cross-validation for model evaluation
+- Try ensemble methods (Random Forest, XGBoost)
+- Monitor for class imbalance during training
