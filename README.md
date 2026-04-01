@@ -80,6 +80,8 @@ DATASET/
 
 `checkpoints`và 4 folder data gốc, chưa chia train/test/val, có thể được xem tại [đây](https://drive.google.com/drive/u/5/folders/14xefJ_dVonEZHFo_yvmBAtjGlPbqUVwX)
 
+Hoặc có thể tải và sử dụng dataset qua link [Huggingface](https://huggingface.co/datasets/minhhungg/rice-disease-dataset)
+
 ---
 
 ## 3. Mô Hình 1 – Phát Hiện Bệnh Lúa (EfficientNet)
